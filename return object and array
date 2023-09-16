@@ -1,0 +1,96 @@
+// Java Program to Illustrate Returning
+// simple built-in arrays
+
+// Importing input output classes
+import java.io.*;
+
+// Main class
+class GFG {
+
+	// Method 1
+	// return array
+	public static void main(String[] args)
+	{
+		// An integer array storing the returned array
+		// from the method
+		int[] storage = methodReturningArray();
+
+		// Printing the elements of the array
+		for (int i = 0; i < storage.length; i++)
+			System.out.print(storage[i] + " ");
+	}
+
+	// Method 2
+	// Returning an integer array
+	public static int[] methodReturningArray()
+	{
+		int[] sample = { 1, 2, 3, 4 };
+
+		// Return statement of the method.
+		return sample;
+	}
+}
+
+
+///////////////return array of object
+
+// Java Program to Illustrate Returning
+// an array of objects in java
+
+// Importing all input output classes
+import java.io.*;
+
+// Class 1
+// Helper class
+// Courses whose objects are returned as an array
+class Courses {
+
+	String name;
+	int modules;
+
+	// Constructor to instantiate class objects.
+	public Courses(String n, int m)
+	{
+		// This keyword refers to current instance itself
+		this.name = n;
+		this.modules = m;
+	}
+}
+
+// Class 2
+// Main class
+class GFG {
+
+	// Method 1
+	// Main driver method
+	public static void main(String[] args)
+	{
+		// Calling the method for returning an array of
+		// objects of the Courses class.
+		Courses[] sample = methodReturningArray();
+
+		// Printing the returned array elements.
+		for (int i = 0; i < sample.length; i++)
+			System.out.print(sample[i].name + " - "
+							+ sample[i].modules
+							+ " modules\n");
+	}
+
+	// Method 2
+	// Note that return type is an array
+	public static Courses[] methodReturningArray()
+	{
+		// Declaring Array of objects of the Courses class
+		Courses[] arr = new Courses[4];
+
+		// Custom array of objects
+		arr[0] = new Courses("Java", 31);
+		arr[1] = new Courses("C++", 26);
+		arr[2] = new Courses("DSA", 24);
+		arr[3] = new Courses("DBMS", 12);
+
+		// Statement to return an array of objects
+		return arr;
+	}
+}
+
